@@ -22,6 +22,7 @@ insert into employee_payroll (name,salary,start) values
 	('Sakshi',30000.0, '2021-01-03');
 
 #Uc4
+
 select * from employee_payroll;
 
 #Uc5
@@ -47,6 +48,39 @@ select avg(salary) from employee_payroll;
 select sum(salary) from employee_payroll where 
 	gender ='F' group by gender;
 
+#Uc8
+alter table employee_payroll add phone varchar(15) ,add address varchar(20) default 'address1',add department varchar(20) not null;
+UPDATE employee_payroll 
+SET 
+    department = 'sales'
+WHERE
+    name IN ('Sakshi' , 'Stuti');
+SELECT 
+    *
+FROM
+    employee_payroll;
+
+#Uc9
+alter table employee_payroll 
+add basic_pay int, 
+add deductions int,
+add taxable_pay int  ,
+add tax int,
+add net_pay int;
+
+#Uc10
+
+DELETE FROM employee_payroll 
+WHERE
+    id IN (1 , 2, 3, 4, 5, 6);
+
+insert into employee_payroll (name,department,gender,basic_pay,deductions,taxable_pay,tax,net_pay,start,salary) values
+	('Terissa','Marketing','F',3000000,1000000,2000000,500000,1500000,'2021-07-08',90000);
+    
+insert into employee_payroll (name,department,gender,basic_pay
+,deductions,taxable_pay,tax,net_pay,start,salary) values
+	('Terissa','Sales','F',3000000,
+    0,0,0,0,'2021-06-01',89999);
 
 
 
