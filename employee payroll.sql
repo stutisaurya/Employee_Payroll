@@ -82,9 +82,15 @@ insert into employee_payroll (name,department,gender,basic_pay
 	('Terissa','Sales','F',3000000,
     0,0,0,0,'2021-06-01',89999);
 
+select * from employee_payroll;
+
+update employee_payroll set phoneNo=9899999998, department='HR' where name='Stuti';
+update employee_payroll set phoneNo=9891299998, department='sales' where name='Saurya';
+update employee_payroll set phoneNo=9892399998, department='marketing' where name='Stuti';
+update employee_payroll set phoneNo=9894599998, department='HR' where name='Sakshi';
+update employee_payroll set phoneNo=9893699998, department='support' where name='Stuti';
+update employee_payroll set phoneNo=9897899998, department='marketing' where name='Sakshi';
+update employee_payroll set phoneNo=9894599998, department='production' where name='Stuti';
+update employee_payroll set phoneNo=9895699998, department='safety' where name='Sakshi';
 
 
-
-
-
-    
